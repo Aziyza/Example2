@@ -40,18 +40,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.transform = CGAffineTransform(scaleX: 0.8, y: 0.7)
-//        cell.alpha = 0.6
-//        let cellview = cell.viewWithTag(3)!
-//        UIView.transition(with: cellview, duration: 0.3, options: .transitionFlipFromTop, animations: {
-//            cell.transform = .identity
-//            cell.alpha = 1
-//        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.4, delay: 0.2, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+//        cell.transform = CGAffineTransform(scaleX: 0.8, y: 0.7)
+        cell.alpha = 0.6
+        let cellview = cell.viewWithTag(3)!
+        UIView.transition(with: cellview, duration: 0.3, options: .transitionFlipFromTop, animations: {
             cell.transform = .identity
             cell.alpha = 1
         }, completion: nil)
+        
+//        UIView.animate(withDuration: 0.4, delay: 0.2, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+//            cell.transform = .identity
+//            cell.alpha = 1
+//        }, completion: nil)
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
